@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO Test</title>
+  </head>
+  <body>
+    <h1>Socket.IO Test</h1>
+    <p>Temperature: <span id="temperature"><%= temperature %></span>°C</p>
+    <p>Humidity: <span id="humidity"><%= humidity %></span>%</p>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      console.log('Coucou1');
+      var socket = io();
+      socket.on('weather', function(weather){
+          document.getElementById('temperature').innerHTML = weather.temperature;
+          document.getElementById('humidity').innerHTML = weather.humidity;
+      });
+    </script>
+  </body>
+</html>

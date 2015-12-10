@@ -1,0 +1,11 @@
+{
+  "name": "weather",
+  "version": "0.0.1",
+  "description": "Read temperature and humidity form sensors",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "i2c-bus": "^1.0.1",
+    "socket.io": "^1.3.7"
+  }
+}
